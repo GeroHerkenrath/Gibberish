@@ -13,8 +13,15 @@ struct PostingList: View {
 			List(0..<5) { _ in
 				Posting()
 			}
-			.navigationBarTitle("Gibberish")
-			.navigationBarItems(trailing: addButton)
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar(content: {
+				ToolbarItem(placement: .principal) {
+					Text("Gibberish").font(.largeTitle).fontWeight(.medium)
+				}
+				ToolbarItem(placement: .navigationBarTrailing) {
+					addButton
+				}
+			})
 		}
 	}
 
