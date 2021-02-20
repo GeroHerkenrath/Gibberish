@@ -14,6 +14,7 @@
 		E670C44325E16B170000232A /* GibberishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44225E16B170000232A /* GibberishTests.swift */; };
 		E670C44E25E16B170000232A /* GibberishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44D25E16B170000232A /* GibberishUITests.swift */; };
 		E6FB589225E1798200D4E1A0 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB589125E1798200D4E1A0 /* Posting.swift */; };
+		E6FB589B25E1835400D4E1A0 /* GibberishLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB589A25E1835400D4E1A0 /* GibberishLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E670C44D25E16B170000232A /* GibberishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishUITests.swift; sourceTree = "<group>"; };
 		E670C44F25E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6FB589125E1798200D4E1A0 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
+		E6FB589A25E1835400D4E1A0 /* GibberishLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				E670C43025E16B160000232A /* GibberishApp.swift */,
 				E670C43225E16B160000232A /* PostingList.swift */,
 				E6FB589125E1798200D4E1A0 /* Posting.swift */,
+				E6FB589925E1831500D4E1A0 /* Content Downloading */,
 				E670C43425E16B170000232A /* Assets.xcassets */,
 				E670C43925E16B170000232A /* Info.plist */,
 				E670C43625E16B170000232A /* Preview Content */,
@@ -131,6 +134,14 @@
 				E670C44F25E16B170000232A /* Info.plist */,
 			);
 			path = GibberishUITests;
+			sourceTree = "<group>";
+		};
+		E6FB589925E1831500D4E1A0 /* Content Downloading */ = {
+			isa = PBXGroup;
+			children = (
+				E6FB589A25E1835400D4E1A0 /* GibberishLoader.swift */,
+			);
+			path = "Content Downloading";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				E670C43325E16B160000232A /* PostingList.swift in Sources */,
 				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
+				E6FB589B25E1835400D4E1A0 /* GibberishLoader.swift in Sources */,
 				E6FB589225E1798200D4E1A0 /* Posting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

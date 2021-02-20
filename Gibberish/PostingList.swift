@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PostingList: View {
+
+	var loader: GibberishLoading = GibberishLoader()
+
 	var body: some View {
 		NavigationView {
 			List(0..<5) { _ in
@@ -27,7 +30,15 @@ struct PostingList: View {
 
 	private var addButton: some View {
 		Button("Add") {
-			 print("do something, but what?")
+			loader.download { response in
+				guard case .goodResponse(let jsonString) = response else {
+					if case .badResponse = response {
+						print("got bad response!")
+					}
+					return
+				}
+				print(jsonString)
+			}
 		}
 	}
 }
