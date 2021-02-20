@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E670C43125E16B160000232A /* GibberishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43025E16B160000232A /* GibberishApp.swift */; };
+		E670C43325E16B160000232A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43225E16B160000232A /* ContentView.swift */; };
+		E670C43525E16B170000232A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43425E16B170000232A /* Assets.xcassets */; };
+		E670C43825E16B170000232A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43725E16B170000232A /* Preview Assets.xcassets */; };
+		E670C44325E16B170000232A /* GibberishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44225E16B170000232A /* GibberishTests.swift */; };
+		E670C44E25E16B170000232A /* GibberishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44D25E16B170000232A /* GibberishUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E670C43F25E16B170000232A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E670C42525E16B160000232A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E670C42C25E16B160000232A;
+			remoteInfo = Gibberish;
+		};
+		E670C44A25E16B170000232A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E670C42525E16B160000232A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E670C42C25E16B160000232A;
+			remoteInfo = Gibberish;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E670C42D25E16B160000232A /* Gibberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gibberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E670C43025E16B160000232A /* GibberishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishApp.swift; sourceTree = "<group>"; };
+		E670C43225E16B160000232A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E670C43425E16B170000232A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E670C43725E16B170000232A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E670C43925E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E670C43E25E16B170000232A /* GibberishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GibberishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E670C44225E16B170000232A /* GibberishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishTests.swift; sourceTree = "<group>"; };
+		E670C44425E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E670C44925E16B170000232A /* GibberishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GibberishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E670C44D25E16B170000232A /* GibberishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishUITests.swift; sourceTree = "<group>"; };
+		E670C44F25E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E670C42A25E16B160000232A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C43B25E16B170000232A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C44625E16B170000232A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E670C42425E16B160000232A = {
+			isa = PBXGroup;
+			children = (
+				E670C42F25E16B160000232A /* Gibberish */,
+				E670C44125E16B170000232A /* GibberishTests */,
+				E670C44C25E16B170000232A /* GibberishUITests */,
+				E670C42E25E16B160000232A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E670C42E25E16B160000232A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E670C42D25E16B160000232A /* Gibberish.app */,
+				E670C43E25E16B170000232A /* GibberishTests.xctest */,
+				E670C44925E16B170000232A /* GibberishUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E670C42F25E16B160000232A /* Gibberish */ = {
+			isa = PBXGroup;
+			children = (
+				E670C43025E16B160000232A /* GibberishApp.swift */,
+				E670C43225E16B160000232A /* ContentView.swift */,
+				E670C43425E16B170000232A /* Assets.xcassets */,
+				E670C43925E16B170000232A /* Info.plist */,
+				E670C43625E16B170000232A /* Preview Content */,
+			);
+			path = Gibberish;
+			sourceTree = "<group>";
+		};
+		E670C43625E16B170000232A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E670C43725E16B170000232A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E670C44125E16B170000232A /* GibberishTests */ = {
+			isa = PBXGroup;
+			children = (
+				E670C44225E16B170000232A /* GibberishTests.swift */,
+				E670C44425E16B170000232A /* Info.plist */,
+			);
+			path = GibberishTests;
+			sourceTree = "<group>";
+		};
+		E670C44C25E16B170000232A /* GibberishUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E670C44D25E16B170000232A /* GibberishUITests.swift */,
+				E670C44F25E16B170000232A /* Info.plist */,
+			);
+			path = GibberishUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E670C42C25E16B160000232A /* Gibberish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E670C45225E16B170000232A /* Build configuration list for PBXNativeTarget "Gibberish" */;
+			buildPhases = (
+				E670C42925E16B160000232A /* Sources */,
+				E670C42A25E16B160000232A /* Frameworks */,
+				E670C42B25E16B160000232A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gibberish;
+			productName = Gibberish;
+			productReference = E670C42D25E16B160000232A /* Gibberish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E670C43D25E16B170000232A /* GibberishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E670C45525E16B170000232A /* Build configuration list for PBXNativeTarget "GibberishTests" */;
+			buildPhases = (
+				E670C43A25E16B170000232A /* Sources */,
+				E670C43B25E16B170000232A /* Frameworks */,
+				E670C43C25E16B170000232A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E670C44025E16B170000232A /* PBXTargetDependency */,
+			);
+			name = GibberishTests;
+			productName = GibberishTests;
+			productReference = E670C43E25E16B170000232A /* GibberishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E670C44825E16B170000232A /* GibberishUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E670C45825E16B170000232A /* Build configuration list for PBXNativeTarget "GibberishUITests" */;
+			buildPhases = (
+				E670C44525E16B170000232A /* Sources */,
+				E670C44625E16B170000232A /* Frameworks */,
+				E670C44725E16B170000232A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E670C44B25E16B170000232A /* PBXTargetDependency */,
+			);
+			name = GibberishUITests;
+			productName = GibberishUITests;
+			productReference = E670C44925E16B170000232A /* GibberishUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E670C42525E16B160000232A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					E670C42C25E16B160000232A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E670C43D25E16B170000232A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E670C42C25E16B160000232A;
+					};
+					E670C44825E16B170000232A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = E670C42C25E16B160000232A;
+					};
+				};
+			};
+			buildConfigurationList = E670C42825E16B160000232A /* Build configuration list for PBXProject "Gibberish" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E670C42425E16B160000232A;
+			productRefGroup = E670C42E25E16B160000232A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E670C42C25E16B160000232A /* Gibberish */,
+				E670C43D25E16B170000232A /* GibberishTests */,
+				E670C44825E16B170000232A /* GibberishUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E670C42B25E16B160000232A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E670C43825E16B170000232A /* Preview Assets.xcassets in Resources */,
+				E670C43525E16B170000232A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C43C25E16B170000232A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C44725E16B170000232A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E670C42925E16B160000232A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E670C43325E16B160000232A /* ContentView.swift in Sources */,
+				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C43A25E16B170000232A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E670C44325E16B170000232A /* GibberishTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E670C44525E16B170000232A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E670C44E25E16B170000232A /* GibberishUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E670C44025E16B170000232A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E670C42C25E16B160000232A /* Gibberish */;
+			targetProxy = E670C43F25E16B170000232A /* PBXContainerItemProxy */;
+		};
+		E670C44B25E16B170000232A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E670C42C25E16B160000232A /* Gibberish */;
+			targetProxy = E670C44A25E16B170000232A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E670C45025E16B170000232A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E670C45125E16B170000232A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E670C45325E16B170000232A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Gibberish/Preview Content\"";
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Gibberish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.Gibberish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E670C45425E16B170000232A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Gibberish/Preview Content\"";
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Gibberish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.Gibberish";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E670C45625E16B170000232A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				INFOPLIST_FILE = GibberishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.GibberishTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gibberish.app/Gibberish";
+			};
+			name = Debug;
+		};
+		E670C45725E16B170000232A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				INFOPLIST_FILE = GibberishTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.GibberishTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gibberish.app/Gibberish";
+			};
+			name = Release;
+		};
+		E670C45925E16B170000232A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				INFOPLIST_FILE = GibberishUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.GibberishUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gibberish;
+			};
+			name = Debug;
+		};
+		E670C45A25E16B170000232A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PSPQUEF8CD;
+				INFOPLIST_FILE = GibberishUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.gero-herkenrath.GibberishUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gibberish;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E670C42825E16B160000232A /* Build configuration list for PBXProject "Gibberish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E670C45025E16B170000232A /* Debug */,
+				E670C45125E16B170000232A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E670C45225E16B170000232A /* Build configuration list for PBXNativeTarget "Gibberish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E670C45325E16B170000232A /* Debug */,
+				E670C45425E16B170000232A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E670C45525E16B170000232A /* Build configuration list for PBXNativeTarget "GibberishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E670C45625E16B170000232A /* Debug */,
+				E670C45725E16B170000232A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E670C45825E16B170000232A /* Build configuration list for PBXNativeTarget "GibberishUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E670C45925E16B170000232A /* Debug */,
+				E670C45A25E16B170000232A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E670C42525E16B160000232A /* Project object */;
+}
