@@ -9,35 +9,27 @@ import SwiftUI
 
 struct PostingList: View {
 
-	var loader: GibberishLoading = GibberishLoader()
+	@ObservedObject var gibberishStore = GibberishStore()
 
 	var body: some View {
 		NavigationView {
-			List(0..<5) { _ in
+			List(gibberishStore.items, id: \.self) { _ in
 				Posting()
 			}
 			.navigationBarTitleDisplayMode(.inline)
-			.toolbar(content: {
+			.toolbar {
 				ToolbarItem(placement: .principal) {
-					Text("Gibberish").font(.largeTitle).fontWeight(.medium)
+					Text("Gibberish")
+						.font(.largeTitle)
+						.fontWeight(.medium)
 				}
 				ToolbarItem(placement: .navigationBarTrailing) {
-					addButton
-				}
-			})
-		}
-	}
-
-	private var addButton: some View {
-		Button("Add") {
-			loader.download { response in
-				guard case .goodResponse(let jsonModel) = response else {
-					if case .badResponse = response {
-						print("got bad response!")
+					if gibberishStore.isLoading {
+						ProgressView()
+					} else {
+						Button("Add", action: gibberishStore.loadMore)
 					}
-					return
 				}
-				print(jsonModel)
 			}
 		}
 	}
@@ -45,6 +37,15 @@ struct PostingList: View {
 
 struct PostingList_Previews: PreviewProvider {
 	static var previews: some View {
-		PostingList()
+		PostingList(gibberishStore: Self.previewStore)
+	}
+
+	static var previewStore: GibberishStore {
+		let retVal = GibberishStore()
+		let testItems = (0..<3).map {
+			GibberishJsonModel(icon: "sun.max.fill", label: "Test \($0)", text: "Hello World!", minWordCount: 1, maxWordCount: 5)
+		}
+		retVal.items = testItems
+		return retVal
 	}
 }

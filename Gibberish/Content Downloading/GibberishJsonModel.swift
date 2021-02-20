@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GibberishJsonModel: Codable {
+struct GibberishJsonModel: Codable, Hashable {
 
 	let icon: String
 	let label: String
