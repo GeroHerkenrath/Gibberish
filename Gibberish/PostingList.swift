@@ -31,13 +31,13 @@ struct PostingList: View {
 	private var addButton: some View {
 		Button("Add") {
 			loader.download { response in
-				guard case .goodResponse(let jsonString) = response else {
+				guard case .goodResponse(let jsonModel) = response else {
 					if case .badResponse = response {
 						print("got bad response!")
 					}
 					return
 				}
-				print(jsonString)
+				print(jsonModel)
 			}
 		}
 	}

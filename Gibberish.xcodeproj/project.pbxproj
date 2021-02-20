@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E65BBD4525E1BBC000828BE1 /* GibberishJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BBD4425E1BBC000828BE1 /* GibberishJsonModel.swift */; };
 		E670C43125E16B160000232A /* GibberishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43025E16B160000232A /* GibberishApp.swift */; };
 		E670C43325E16B160000232A /* PostingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43225E16B160000232A /* PostingList.swift */; };
 		E670C43525E16B170000232A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43425E16B170000232A /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E65BBD4425E1BBC000828BE1 /* GibberishJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishJsonModel.swift; sourceTree = "<group>"; };
 		E670C42D25E16B160000232A /* Gibberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gibberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E670C43025E16B160000232A /* GibberishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishApp.swift; sourceTree = "<group>"; };
 		E670C43225E16B160000232A /* PostingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingList.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				E6FB589A25E1835400D4E1A0 /* GibberishLoader.swift */,
+				E65BBD4425E1BBC000828BE1 /* GibberishJsonModel.swift */,
 			);
 			path = "Content Downloading";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				E670C43325E16B160000232A /* PostingList.swift in Sources */,
 				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
+				E65BBD4525E1BBC000828BE1 /* GibberishJsonModel.swift in Sources */,
 				E6FB589B25E1835400D4E1A0 /* GibberishLoader.swift in Sources */,
 				E6FB589225E1798200D4E1A0 /* Posting.swift in Sources */,
 			);

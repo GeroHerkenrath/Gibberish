@@ -11,7 +11,8 @@ enum GibberishLoadingResponse {
 	case clientError
 	case networkError(Error)
 	case badResponse
-	case goodResponse(String)
+	case parsingError(Error)
+	case goodResponse(GibberishJsonModel)
 }
 
 protocol GibberishLoading {
@@ -37,12 +38,16 @@ struct GibberishLoader: GibberishLoading {
 				DispatchQueue.main.async { onCompletion(.networkError(error)) }
 				return
 			}
-			guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
-				  let jsonString = String(data: data, encoding: .utf8) else {
+			guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
 				DispatchQueue.main.async { onCompletion(.badResponse) }
 				return
 			}
-			DispatchQueue.main.async { onCompletion(.goodResponse(jsonString)) }
+			do {
+				let jsonModel = try JSONDecoder().decode(GibberishJsonModel.self, from: data)
+				DispatchQueue.main.async { onCompletion(.goodResponse(jsonModel)) }
+			} catch {
+				DispatchQueue.main.async { onCompletion(.parsingError(error)) }
+			}
 		}
 		task.resume()
 	}
