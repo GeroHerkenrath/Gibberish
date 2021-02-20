@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E670C43125E16B160000232A /* GibberishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43025E16B160000232A /* GibberishApp.swift */; };
-		E670C43325E16B160000232A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43225E16B160000232A /* ContentView.swift */; };
+		E670C43325E16B160000232A /* PostingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43225E16B160000232A /* PostingList.swift */; };
 		E670C43525E16B170000232A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43425E16B170000232A /* Assets.xcassets */; };
 		E670C43825E16B170000232A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43725E16B170000232A /* Preview Assets.xcassets */; };
 		E670C44325E16B170000232A /* GibberishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44225E16B170000232A /* GibberishTests.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		E670C42D25E16B160000232A /* Gibberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gibberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E670C43025E16B160000232A /* GibberishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishApp.swift; sourceTree = "<group>"; };
-		E670C43225E16B160000232A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E670C43225E16B160000232A /* PostingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingList.swift; sourceTree = "<group>"; };
 		E670C43425E16B170000232A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E670C43725E16B170000232A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E670C43925E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				E670C43025E16B160000232A /* GibberishApp.swift */,
-				E670C43225E16B160000232A /* ContentView.swift */,
+				E670C43225E16B160000232A /* PostingList.swift */,
 				E670C43425E16B170000232A /* Assets.xcassets */,
 				E670C43925E16B170000232A /* Info.plist */,
 				E670C43625E16B170000232A /* Preview Content */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E670C43325E16B160000232A /* ContentView.swift in Sources */,
+				E670C43325E16B160000232A /* PostingList.swift in Sources */,
 				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
