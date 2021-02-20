@@ -13,6 +13,7 @@
 		E670C43825E16B170000232A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43725E16B170000232A /* Preview Assets.xcassets */; };
 		E670C44325E16B170000232A /* GibberishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44225E16B170000232A /* GibberishTests.swift */; };
 		E670C44E25E16B170000232A /* GibberishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C44D25E16B170000232A /* GibberishUITests.swift */; };
+		E6FB589225E1798200D4E1A0 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB589125E1798200D4E1A0 /* Posting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		E670C44925E16B170000232A /* GibberishUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GibberishUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E670C44D25E16B170000232A /* GibberishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishUITests.swift; sourceTree = "<group>"; };
 		E670C44F25E16B170000232A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6FB589125E1798200D4E1A0 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				E670C43025E16B160000232A /* GibberishApp.swift */,
 				E670C43225E16B160000232A /* PostingList.swift */,
+				E6FB589125E1798200D4E1A0 /* Posting.swift */,
 				E670C43425E16B170000232A /* Assets.xcassets */,
 				E670C43925E16B170000232A /* Info.plist */,
 				E670C43625E16B170000232A /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				E670C43325E16B160000232A /* PostingList.swift in Sources */,
 				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
+				E6FB589225E1798200D4E1A0 /* Posting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
