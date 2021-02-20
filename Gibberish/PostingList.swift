@@ -9,8 +9,19 @@ import SwiftUI
 
 struct PostingList: View {
 	var body: some View {
-		Text("Hello, world!")
-			.padding()
+		NavigationView {
+			List(0..<5) { _ in
+				Posting()
+			}
+			.navigationBarTitle("Gibberish")
+			.navigationBarItems(trailing: addButton)
+		}
+	}
+
+	private var addButton: some View {
+		Button("Add") {
+			 print("do something, but what?")
+		}
 	}
 }
 
