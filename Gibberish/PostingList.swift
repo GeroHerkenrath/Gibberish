@@ -13,9 +13,17 @@ struct PostingList: View {
 
 	var body: some View {
 		NavigationView {
-			List(gibberishStore.items) {
-				Posting(iconName: $0.iconName, author: $0.author,
-						content: $0.text)
+			List {
+				if gibberishStore.items.isEmpty {
+					Text("No gibberish yet, load some with 'Add'!")
+						.padding()
+						.frame(maxWidth: .infinity, alignment: .center)
+				} else {
+					ForEach(gibberishStore.items) {
+						Posting(iconName: $0.iconName, author: $0.author,
+								content: $0.text)
+					}
+				}
 			}
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
@@ -48,6 +56,7 @@ struct PostingList: View {
 struct PostingList_Previews: PreviewProvider {
 	static var previews: some View {
 		PostingList(gibberishStore: Self.previewStore)
+		PostingList()
 	}
 
 	static var previewStore: GibberishStore {
