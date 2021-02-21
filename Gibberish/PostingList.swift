@@ -23,6 +23,9 @@ struct PostingList: View {
 						Posting(iconName: $0.iconName, author: $0.author,
 								content: $0.text)
 					}
+					.onDelete(perform: { indexSet in
+						gibberishStore.items.remove(atOffsets: indexSet)
+					})
 				}
 			}
 			.animation(gibberishStore.items.isEmpty ? .none : .easeInOut)
