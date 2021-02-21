@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Posting: View {
 
-	private let iconName = "sun.max.fill"
-	private let author = "Mike"
-	private let content = "This is my Post!\nLet's see"
+	let iconName: String
+	let author: String
+	let content: String
 
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -28,16 +28,24 @@ struct Posting: View {
 				.font(.body)
 		}
 		.padding()
-		.fixedSize(horizontal: true, vertical: true)
+		.fixedSize(horizontal: false, vertical: true)
 	}
 }
 
 struct Posting_Previews: PreviewProvider {
+	static let longLine =
+		"""
+This is a long piece of text that is supposed to wrap around and maybe even
+contain
+several lines and so forth. This is good for testing!
+"""
 	static var previews: some View {
-		Posting()
+		Posting(iconName: "sun.max.fill", author: "Mike",
+				content: "This is my Post!\n\(Self.longLine)")
 			.previewLayout(.sizeThatFits)
-		List(0..<5) { _ in
-			Posting()
+		List(0..<5) {
+			Posting(iconName: "sun.max.fill", author: "Mike \($0)",
+					content: "This is my Post \($0)!\n\(Self.longLine)")
 		}
 		.previewLayout(.sizeThatFits)
 	}

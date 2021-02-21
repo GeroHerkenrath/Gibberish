@@ -13,8 +13,9 @@ struct PostingList: View {
 
 	var body: some View {
 		NavigationView {
-			List(gibberishStore.items, id: \.self) { _ in
-				Posting()
+			List(gibberishStore.items) {
+				Posting(iconName: $0.iconName, author: $0.author,
+						content: $0.text)
 			}
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
@@ -52,9 +53,8 @@ struct PostingList_Previews: PreviewProvider {
 	static var previewStore: GibberishStore {
 		let retVal = GibberishStore()
 		let testItems = (0..<3).map {
-			GibberishJsonModel(icon: "sun.max.fill", label: "Test \($0)",
-							   text: "Hello World!", minWordCount: 1,
-							   maxWordCount: 5)
+			GibberishStore.Element(iconName: "sun.max.fill", author: "Test \($0)",
+								   text: "Hello World from number \($0)")
 		}
 		retVal.items = testItems
 		return retVal

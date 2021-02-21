@@ -9,7 +9,7 @@ import Foundation
 
 class GibberishStore: ObservableObject {
 
-	@Published var items = [GibberishJsonModel]()
+	@Published var items = [Element]()
 	@Published var isLoading = false
 
 	var gibberishLoader: GibberishLoading = GibberishLoader()
@@ -21,7 +21,17 @@ class GibberishStore: ObservableObject {
 			guard case .goodResponse(let newItem) = response else {
 				return
 			}
-			self?.items.append(newItem)
+			self?.items.append(Element(iconName: newItem.icon, author: newItem.label, text: newItem.text))
 		}
+	}
+}
+
+extension GibberishStore {
+
+	struct Element: Identifiable {
+		let id = UUID()
+		let iconName: String
+		let author: String
+		let text: String
 	}
 }
