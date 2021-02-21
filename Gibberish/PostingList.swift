@@ -18,17 +18,26 @@ struct PostingList: View {
 			}
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
-				ToolbarItem(placement: .principal) {
-					Text("Gibberish")
-						.font(.largeTitle)
-						.fontWeight(.medium)
-				}
-				ToolbarItem(placement: .navigationBarTrailing) {
-					if gibberishStore.isLoading {
-						ProgressView()
-					} else {
-						Button("Add", action: gibberishStore.loadMore)
-					}
+				PostingToolbar(isLoading: gibberishStore.isLoading,
+							   load: gibberishStore.loadMore)
+			}
+		}
+	}
+
+	private struct PostingToolbar: ToolbarContent {
+		@State var isLoading: Bool
+		var load: () -> Void
+		var body: some ToolbarContent {
+			ToolbarItem(placement: .principal) {
+				Text("Gibberish")
+					.font(.largeTitle)
+					.fontWeight(.medium)
+			}
+			ToolbarItem(placement: .navigationBarTrailing) {
+				if isLoading {
+					ProgressView()
+				} else {
+					Button("Add", action: load)
 				}
 			}
 		}
@@ -43,7 +52,9 @@ struct PostingList_Previews: PreviewProvider {
 	static var previewStore: GibberishStore {
 		let retVal = GibberishStore()
 		let testItems = (0..<3).map {
-			GibberishJsonModel(icon: "sun.max.fill", label: "Test \($0)", text: "Hello World!", minWordCount: 1, maxWordCount: 5)
+			GibberishJsonModel(icon: "sun.max.fill", label: "Test \($0)",
+							   text: "Hello World!", minWordCount: 1,
+							   maxWordCount: 5)
 		}
 		retVal.items = testItems
 		return retVal
