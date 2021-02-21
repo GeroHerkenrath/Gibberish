@@ -25,6 +25,7 @@ struct PostingList: View {
 					}
 				}
 			}
+			.animation(gibberishStore.items.isEmpty ? .none : .easeInOut)
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
 				PostingToolbar(isLoading: gibberishStore.isLoading,
