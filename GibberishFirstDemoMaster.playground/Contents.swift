@@ -29,24 +29,55 @@ for anInt in intArray {
 	}
 }
 
-let doubleArray = intArray.map { Double($0) }
+// before we get to the "classic" kinds of types (i.e. classes and structs, pun intended...)
 
+// extending existing types with new functionality (just not stored properties)
 extension Double {
-	func stringed(withSuffix suffix: String) -> String {
-		return "\(self)\(suffix)"
+	// methods:
+	func justAnExample() {
+		print("I won't even demo this...")
 	}
-	var percented: Double {
-		return self / 100.0
-	}
+	// stored properties won't work:
+//	var isForDemo = false
+
+	// this is a calculated property, of course it also works on own types & without an extension
 	var oddOrNil: Double? {
 		guard self.truncatingRemainder(dividingBy: 2.0) == 0 else {
 			return nil
 		}
 		return self
 	}
+	// static methods and static calculated properties are also okay!
 }
 
+// defining behavior:
+protocol UselessThings {
+	func stringed(withSuffix suffix: String) -> String
+	var percented: Double { get }
+}
+
+// providing a default that can be "overridden" by conforming types (note the quotes here!)
+extension UselessThings {
+	func stringed(withSuffix suffix: String) -> String {
+		return "\(self)\(suffix)"
+	}
+}
+
+// making existing types conform to the protocol
+// note that in this case we at first do not change the default for `stringed(withSuffix:)`
+extension Double: UselessThings {
+	var percented: Double {
+		return self / 100.0
+	}
+//	func stringed(withSuffix suffix: String) -> String {
+//		return "\(self.percented)\(suffix)"
+//	}
+}
+
+let doubleArray = [6, 7, 8, 9, 10].map { Double($0) }
+
 doubleArray.forEach { print($0.percented) }
+
 let someDoubles = doubleArray.compactMap { theDouble -> String? in
 	guard let oddDouble = theDouble.oddOrNil else {
 		return nil
@@ -54,6 +85,32 @@ let someDoubles = doubleArray.compactMap { theDouble -> String? in
 	return oddDouble.stringed(withSuffix: " €")
 }
 print(someDoubles.joined(separator: ", "))
+
+// abstracting _existing_ behavior to get a grasp on it
+protocol HasBitPattern {
+	var bitPattern: UInt64 { get }
+}
+extension Double: HasBitPattern { }
+
+// making use of our abstraction and using constraints on protocol adoption
+extension Array where Element: HasBitPattern { // Array is a generic struct
+	func concatenateBitPatterns() -> String {
+		// 1: most verbose syntax for (trailing) closures
+		return reduce("", { soFar, nextValue -> String in
+			return soFar.appending("\(nextValue.bitPattern)")
+		})
+
+		// 2: better...
+//		return reduce("") { soFar, nextValue in
+//			soFar + "\(nextValue.bitPattern)"
+//		}
+
+		// 3: yay, that's short!
+//		reduce("") { $0 + "\($1.bitPattern)" }
+	}
+}
+
+print(doubleArray.concatenateBitPatterns())
 
 print("\n\n\((1...40).reduce("", { next, _ in return next + " #" }))\n\n")
 
@@ -167,10 +224,21 @@ class GibberishStore {
 					self?.delegate?.completedLoading(fullItemList: currentItems)
 				}
 			}
+			// the following is case pattern matching (and the only "weird" syntax in Swift imo)
 			guard case .goodResponse(let newItem) = response else {
 				return
 			}
 			self?.items.append(Element(iconName: newItem.icon, author: newItem.label, text: newItem.text))
+
+			// note: we could also do something like this if we were interested in several cases:
+//			switch response {
+//			case .goodResponse(let newItem):
+//				self?.items.append(Element(iconName: newItem.icon, author: newItem.label, text: newItem.text))
+//			case .clientError, .networkError: // note we are not interested in the associated value of networkError
+//				print("you're doing it wrong! maybe airplane mode?")
+//			default: // the rest: parsingError and badRequest
+//				print("something with the API is broken...")
+//			}
 		}
 	}
 }
