@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E65BBD4525E1BBC000828BE1 /* GibberishJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BBD4425E1BBC000828BE1 /* GibberishJsonModel.swift */; };
 		E65BBD4D25E1BEC800828BE1 /* GibberishStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65BBD4C25E1BEC800828BE1 /* GibberishStore.swift */; };
+		E66B9D6C25E2DCD4003D83EA /* PostingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B9D6B25E2DCD4003D83EA /* PostingDetails.swift */; };
 		E670C43125E16B160000232A /* GibberishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43025E16B160000232A /* GibberishApp.swift */; };
 		E670C43325E16B160000232A /* PostingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E670C43225E16B160000232A /* PostingList.swift */; };
 		E670C43525E16B170000232A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E670C43425E16B170000232A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		E65BBD4425E1BBC000828BE1 /* GibberishJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishJsonModel.swift; sourceTree = "<group>"; };
 		E65BBD4C25E1BEC800828BE1 /* GibberishStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishStore.swift; sourceTree = "<group>"; };
+		E66B9D6B25E2DCD4003D83EA /* PostingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingDetails.swift; sourceTree = "<group>"; };
 		E670C42D25E16B160000232A /* Gibberish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gibberish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E670C43025E16B160000232A /* GibberishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GibberishApp.swift; sourceTree = "<group>"; };
 		E670C43225E16B160000232A /* PostingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingList.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				E670C43225E16B160000232A /* PostingList.swift */,
 				E6FB589125E1798200D4E1A0 /* Posting.swift */,
 				E65BBD4C25E1BEC800828BE1 /* GibberishStore.swift */,
+				E66B9D6B25E2DCD4003D83EA /* PostingDetails.swift */,
 				E6FB589925E1831500D4E1A0 /* Content Downloading */,
 				E670C43425E16B170000232A /* Assets.xcassets */,
 				E670C43925E16B170000232A /* Info.plist */,
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66B9D6C25E2DCD4003D83EA /* PostingDetails.swift in Sources */,
 				E670C43325E16B160000232A /* PostingList.swift in Sources */,
 				E670C43125E16B160000232A /* GibberishApp.swift in Sources */,
 				E65BBD4525E1BBC000828BE1 /* GibberishJsonModel.swift in Sources */,

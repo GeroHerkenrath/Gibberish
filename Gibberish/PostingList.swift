@@ -19,9 +19,11 @@ struct PostingList: View {
 						.padding()
 						.frame(maxWidth: .infinity, alignment: .center)
 				} else {
-					ForEach(gibberishStore.items) {
-						Posting(iconName: $0.iconName, author: $0.author,
-								content: $0.text)
+					ForEach(gibberishStore.items) { item in
+						NavigationLink(destination: PostingDetails(element: item)) {
+								Posting(iconName: item.iconName, author: item.author,
+										content: item.text)
+						}
 					}
 					.onDelete(perform: { indexSet in
 						gibberishStore.items.remove(atOffsets: indexSet)

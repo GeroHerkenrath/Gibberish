@@ -26,6 +26,7 @@ struct Posting: View {
 			}
 			Text(content)
 				.font(.body)
+				.lineLimit(3)
 		}
 		.padding()
 		.fixedSize(horizontal: false, vertical: true)
