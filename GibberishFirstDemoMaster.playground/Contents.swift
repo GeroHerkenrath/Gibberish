@@ -39,6 +39,8 @@ extension Double {
 	}
 	// stored properties won't work:
 //	var isForDemo = false
+	// unless they're static (i.e. on the type and not the instance)
+	static var thisWorks = false
 
 	// this is a calculated property, of course it also works on own types & without an extension
 	var oddOrNil: Double? {
@@ -56,7 +58,7 @@ protocol UselessThings {
 	var percented: Double { get }
 }
 
-// providing a default that can be "overridden" by conforming types (note the quotes here!)
+// providing a default that can still be "replaced" by conforming types
 extension UselessThings {
 	func stringed(withSuffix suffix: String) -> String {
 		return "\(self)\(suffix)"
@@ -74,16 +76,20 @@ extension Double: UselessThings {
 //	}
 }
 
-let doubleArray = [6, 7, 8, 9, 10].map { Double($0) }
+let doubleArray = [6, 7, 8, 9, 10].map({ element in
+	Double(element)
+})
 
-doubleArray.forEach { print($0.percented) }
+doubleArray.forEach({ element in
+	print(element.percented)
+})
 
-let someDoubles = doubleArray.compactMap { theDouble -> String? in
+let someDoubles = doubleArray.compactMap({ theDouble -> String? in
 	guard let oddDouble = theDouble.oddOrNil else {
 		return nil
 	}
 	return oddDouble.stringed(withSuffix: " €")
-}
+})
 print(someDoubles.joined(separator: ", "))
 
 // abstracting _existing_ behavior to get a grasp on it
@@ -112,6 +118,8 @@ extension Array where Element: HasBitPattern { // Array is a generic struct
 
 print(doubleArray.concatenateBitPatterns())
 
+// cannot use shorthand, i.e. $0 and $1, in next closure, as we're only using the first parameter.
+// also note the second is ignored with "_"
 print("\n\n\((1...40).reduce("", { next, _ in return next + " #" }))\n\n")
 
 
@@ -121,7 +129,6 @@ print("\n\n\((1...40).reduce("", { next, _ in return next + " #" }))\n\n")
 // 			2. Type for parsing into
 //			3. Briefly: How does that Codable etc. work? Where's annotations for JSON field names, etc.?
 //						-> Simple case here, stuff is synthesized, but configurable well!
-//struct GibberishJsonModel: Codable, Hashable {
 struct GibberishJsonModel: Codable {
 
 	let icon: String
@@ -133,8 +140,8 @@ struct GibberishJsonModel: Codable {
 
 // MARK: - Step 2 - The Loader
 // Note to self: First do this without the protocol!
+//struct GibberishLoader: GibberishLoading {
 struct GibberishLoader {
-//struct GibberishLoader {
 
 	private static let delayKey = "responseDelay"
 	private static let minWordKey = "minWordCount"
@@ -185,6 +192,11 @@ enum GibberishLoadingResponse {
 	case badResponse
 	case parsingError(Error)
 	case goodResponse(GibberishJsonModel)
+}
+
+let aLoader = GibberishLoader()
+aLoader.download { response in
+	print("Loader loaded:\n\(response)")
 }
 
 // MARK: - Step 3 - Classic Store object
