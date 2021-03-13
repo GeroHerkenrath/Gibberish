@@ -1,0 +1,88 @@
+openapi: 3.0.1
+info:
+  title: Gibberish
+  description: 'This is a fun API to deliver nonsensical posts.'
+  version: 1.0.0
+servers:
+- url: https://codingfromhell.net/swiftDemo/listElement?responseDelay=500
+tags:
+- name: listElement
+  description: Everything about your Pets
+paths:
+  /listElement:
+    get:
+      tags:
+      - listElement
+      summary: Get a nonsensical post
+      description: This gets a nonsensical post that is randomly created each time
+      parameters:
+      - name: responseDelay
+        in: query
+        description: A delay before the API response is delivered. Constrained to be between 0 and 5000 milliseconds.
+        required: true
+        schema:
+          type: integer
+      - name: minWordCount
+        in: query
+        description: A minimum count of words to be generated in the 'text' response field. Constrained to be larger than or equal to 10 which is also the default.
+        required: false
+        schema:
+          type: integer
+      - name: maxWordCount
+        in: query
+        description: A maximum count of words to be generated in the 'text' response field. Constrained to be at least minWordCount + 5 which is also the default.
+        required: false
+        schema:
+          type: integer
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  icon: 
+                    type: string
+                    example: 'sun.max.fill'
+                    description: One of 10 icon names from Apple's SF Symbols icon set. Randomly chosen for each request.
+                  label: 
+                    type: string
+                    example: 'Kiera'
+                    description: One of 10 names. Randomly chosen for each request.
+                  text: 
+                    type: string
+                    example: 'Because furrowed on jaguar babbled insanely horse credible well into red-handedly much terrier moronic'
+                    description: A random words text string that falls within the min and max length given by the minWordCount and maxWordCount query parameters. The text is retrieved from the https://www.randomtext.me API by Dale Davies (Thanks!).
+                  minWordCount: 
+                    type: integer
+                    example: 10
+                    description: The finally used minWordCount parameter, meaning it is usually the query parameter unless the constraints encorced a different value (e.g. passing a value below 10 means that 10 was actually used and is given here).
+                  maxWordCount: 
+                    type: integer
+                    example: 15
+                    description: The finally used maxWordCount parameter, meaning it is usually the query parameter unless the constraints encorced a different value (e.g. passing a value smaller than minWordCount + 5 means that minWordCount + 5 was actually used and is given here).
+                required:
+                  - icon
+                  - label
+                  - text
+                  - minWordCount
+                  - maxWordCount
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status: 
+                    type: integer
+                    enum: [400]
+                    example: 400
+                  message:
+                    type: string
+                    enum: ['Bad Request']
+                    example: 'Bad Request'
+                required:
+                  - status
+                  - message
