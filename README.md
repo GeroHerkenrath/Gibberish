@@ -32,7 +32,11 @@ Excuse anything egregious in terms of PHP, I virtually never programmed in that 
 For the demo it works well enough I'd say. 
 I also included a short spec to explain how it works in `listElement.yaml`.
 
-To actually generate the random gibberish the API delivers I used another API, [https://www.randomtext.me/](https://www.randomtext.me/), by [Dale Davies](https://www.daledavies.co.uk). Thanks!
+~~To actually generate the random gibberish the API delivers I used another API, [https://www.randomtext.me/](https://www.randomtext.me/), by [Dale Davies](https://www.daledavies.co.uk). Thanks!~~
+
+Unfortunately Dale's API seems to no longer work, so I switched to [Dino Ipsum](https://dinoipsum.com).
+That had the best fit for me, although "Gibberish" now seems a bit odd, considering the text I provide is exclusively dinosaur names.
+Oh well, it's fun and still serves its purpose. :smiley:
 
 ## Code signing ##
 

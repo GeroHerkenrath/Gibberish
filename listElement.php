@@ -65,10 +65,9 @@ function getLabelText($withNumber) {
 }
 
 function getRandomText($min, $max) {
-    $foreignPayload = file_get_contents("https://www.randomtext.me/api/gibberish/p-1/{$min}-{$max}");
-    $foreignJson = json_decode($foreignPayload, true);
-    $foreignText = $foreignJson['text_out'];
-    return substr($foreignText, 3, -5); // remove tags and stuff
+    $finalWordCount = rand($min, $max);
+    $dinoText = file_get_contents("https://dinoipsum.com/api/?format=text&paragraphs=1&words={$finalWordCount}");
+    return substr($dinoText, 0, -2); # removing two newlines
 }
 
 // error handling (400 and exit)
