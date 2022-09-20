@@ -9,9 +9,9 @@ import Foundation
 
 struct GibberishJsonModel: Codable, Hashable {
 
-	let icon: String
-	let label: String
-	let text: String
-	let minWordCount: Int
-	let maxWordCount: Int
+    let icon: String
+    let label: String
+    let text: String
+    let minWordCount: Int
+    let maxWordCount: Int
 }

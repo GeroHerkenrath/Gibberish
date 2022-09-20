@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct GibberishApp: App {
-	var body: some Scene {
-		WindowGroup {
-			PostingList()
-		}
-	}
+    var body: some Scene {
+        WindowGroup {
+            PostingList()
+        }
+    }
 }
