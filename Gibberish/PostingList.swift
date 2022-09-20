@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostingList: View {
 
-	@ObservedObject var gibberishStore = GibberishStore()
+	@StateObject var gibberishStore = GibberishStore()
 
 	var body: some View {
 		NavigationView {
@@ -40,8 +40,8 @@ struct PostingList: View {
 	}
 
 	private struct PostingToolbar: ToolbarContent {
-		@State var isLoading: Bool
-		var load: () -> Void
+		let isLoading: Bool
+		let load: () -> Void
 		var body: some ToolbarContent {
 			ToolbarItem(placement: .principal) {
 				Text("Gibberish")
